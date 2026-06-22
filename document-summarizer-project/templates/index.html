@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document Summaries</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        th {
+            background: #f4f4f4;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Document Summaries</h1>
+
+    <table>
+
+        <tr>
+            <th>File Name</th>
+            <th>Summary</th>
+        </tr>
+
+        {% for item in results %}
+
+        <tr>
+            <td>{{item.file_name}}</td>
+            <td>{{item.summary}}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>
